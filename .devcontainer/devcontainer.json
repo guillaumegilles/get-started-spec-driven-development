@@ -28,7 +28,7 @@
             ]
         }
     },
-//    "initializeCommand": "bash ${localWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
+    "updateContentCommand": "bash ${localWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
     "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
     "postStartCommand": "uv tool install specify-cli --from git+https://github.com/github/spec-kit.git",
     "hostRequirements": {
