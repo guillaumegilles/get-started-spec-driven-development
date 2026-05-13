@@ -8,11 +8,6 @@
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "2"
         },
-        "ghcr.io/devcontainers/features/dotnet:2": {
-            "version": "none",
-            "dotnetRuntimeVersions": "10.0",
-            "aspNetCoreRuntimeVersions": "10.0"
-        },
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.12"
         },
@@ -28,9 +23,8 @@
             ]
         }
     },
-    "updateContentCommand": "bash ${localWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
-    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh",
-    "postStartCommand": "uv tool install specify-cli --from git+https://github.com/github/spec-kit.git",
+    "updateContentCommand": "bash ${containerWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git",
     "hostRequirements": {
         "memory": "8gb",
         "cpus": 4
