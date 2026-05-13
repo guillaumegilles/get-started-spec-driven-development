@@ -19,12 +19,16 @@
         "vscode": {
             "extensions": [
                 "GitHub.copilot",
+                "GitHub.copilot-chat",
                 "ms-dotnettools.csdevkit"
             ]
         }
     },
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.local/bin"
+    },
     "updateContentCommand": "bash ${containerWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
-    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git",
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git && (dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org || true) && (sudo apt-get install -y sqlite3 || true)",
     "hostRequirements": {
         "memory": "8gb",
         "cpus": 4
