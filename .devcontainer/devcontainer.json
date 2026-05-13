@@ -8,8 +8,9 @@
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "2"
         },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.12"
+            "version": "os-provided"
         },
         "ghcr.io/devcontainers/features/node:2.0.0": {
             "version": "latest"
@@ -28,7 +29,7 @@
         "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.local/bin"
     },
     "updateContentCommand": "bash ${containerWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
-    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git && (dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org || true) && (sudo apt-get install -y sqlite3 || true)",
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git && (dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org || true) && (apt-get install -y sqlite3 || true)",
     "hostRequirements": {
         "memory": "8gb",
         "cpus": 4
