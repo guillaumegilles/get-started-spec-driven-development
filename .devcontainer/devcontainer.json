@@ -28,8 +28,8 @@
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.local/bin"
     },
+    "onCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git && (dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org || true) && (apt-get update -qq && apt-get install -y sqlite3 || true)",
     "updateContentCommand": "bash ${containerWorkspaceFolder}/.devcontainer/setup-sql-server.sh",
-    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv tool install specify-cli --from git+https://github.com/github/spec-kit.git && (dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org || true) && (apt-get update -qq && apt-get install -y sqlite3 || true)",
     "hostRequirements": {
         "memory": "8gb",
         "cpus": 4
