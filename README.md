@@ -3,10 +3,6 @@
 A ready-to-use GitHub Codespace for the [GitHub Dev Kit lab](https://microsoftlearning.github.io/mslearn-github-copilot-dev/Instructions/Labs/LAB_AK_00_configure_github_dev_kit_lab.html)
 on spec-driven development with GitHub Copilot.
 
-This repo is a companion to [this blog post](https://example.com/TODO), where I
-explain the SDD methodology and walk through a hands-on exercise inside this
-Codespace.
-
 ## What's included
 
 Opening this repo in a Codespace gives you a fully configured environment with:
@@ -24,3 +20,19 @@ Click **Code → Codespaces → Create codespace** — the environment is pre-bu
 and ready in seconds.
 
 > Requires a GitHub account with GitHub Copilot enabled.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow using
+Spec Kit, branch naming, and commit conventions.
+
+## Community
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Issue templates](.github/ISSUE_TEMPLATE/)
+- [Pull request template](.github/pull_request_template.md)
+
+## License
+
+[GNU General Public License v3.0](LICENSE)
